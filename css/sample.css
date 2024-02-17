@@ -1,0 +1,154 @@
+ 
+ 
+  /* ヘッダー */
+  header {
+    padding: 27px 0;
+    margin-bottom: 90px;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+  .logo span {
+    color: #80BA4A;
+  }
+  .header_menu li {
+    margin-left: 40px;
+  }
+  .header_menu li a {
+    transition: .3s;
+  }
+  .header_menu li a:hover {
+    color: #80BA4A;
+    transition: .3s;
+  }
+  
+  .pop {font-family: 'Poppins', sans-serif;}
+  
+  .container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  
+  
+  /* Top画像 */
+  #hero {
+    background-image: url(../img/hero.png);
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+     /* 角丸にする↓ */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    overflow: hidden;
+  }
+
+  /* 上に少し黒い色をかける */
+  #hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  /* トップ画像の文字 */
+  .hero_inner {
+    z-index: 2;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .hero_inner p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .hero_inner h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+
+body{
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-size: 32px; 
+}
+ /* header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+} */
+
+
+main{
+    border-bottom:1px solid #ccc;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    margin-top: 90px;
+    color: #80BA4A;
+    font-size: 24px;
+
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+button{
+    display:inline-block;
+    background:#80BA4A;
+    padding:10px 30px;
+    text-align:center;
+    font-size: 30px;
+    color:#FFF;
+    border:1px solid;
+    cursor:pointer;
+     /* 角丸にする↓ */
+     border-radius: 30px;
+     /* display: flex; */
+     /* align-items: center; */
+     /* margin-bottom: 90px; */
+     overflow: hidden;
+    }

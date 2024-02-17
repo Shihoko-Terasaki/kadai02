@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+    <script>
+    function R_Click(p_janken_r) {
+        let janken = ['グー','チョキ','パー',];//"janken"のリストを作成
+        let janken_r = Math.floor( Math.random() * 3);//Math.random() で乱数作成
+
+        let p_janken = ['グー','チョキ','パー'];//"プレイヤーのjanken"のリスト
+
+            //勝ち負けの判定プログラム
+            if (janken_r === p_janken_r) {
+                Result_end = "でした。おあいこです。もう一回勝負しましょう！";
+            } else if(p_janken_r === 0 && janken_r === 1) {
+                Result_end = "でした。おめでとう！あなたの勝ちです。";
+            }else if(p_janken_r === 1 && janken_r === 2) {
+                Result_end = "でした。おめでとう！あなたの勝ちです。";
+            }else if(p_janken_r === 2 && janken_r === 0) {
+                Result_end = "でした。おめでとう！あなたの勝ちです。";
+            }else {
+                Result_end = "でした。残念！！あなたの負けです。";
+            }
+
+            //結果を表示するためのプログラム
+            document.getElementById("jankenpon").src="../img/jan" + janken_r + ".png";
+            document.getElementById("Rejan1").innerHTML = p_janken[p_janken_r] +"を選択しました。ジャンケンの結果は・・・？";
+            document.getElementById("Rejan2").innerHTML = "相手は" + janken[janken_r] + Result_end;
+            document.getElementById("jankenpon2").src="../img/jan" + p_janken_r + ".png";
+        }
+    </script>
+
+</head>
+
+<body>
+
+        <!-- ヘッダー -->  
+  <header>
+    <div class="container flex pop">
+      <a href="../img/header.png" class="logo">
+        <span>じゃんけん大会</span> <!-- MARU -->
+      </a>
+      <!-- ナビゲーション
+      <nav>
+        <ul class="header_menu flex">
+          <li><a href="#concept">じゃんけん</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#access">Access</a>
+          <li><a href="#shop">Shop information</a>
+          <li><a href="#form">Form</a>  
+        </ul>
+      </nav>
+ -->
+    </div>
+  </header>
+
+       <!-- top画像 -->
+       <section id="hero" class="container">
+        <div class="hero_inner">
+          <!-- <p class="pop">Enjoy Your Life</p> -->
+          <!-- <h1>Java Script Game</h1> -->
+        </div>
+      </section>
+      <!-- top画像終了 -->
+
+    <!-- プレーヤーが何を出すか決める -->
+    <p><img id="jankenpon" src="../img/jan.png" width="200" height="200"></p>
+    <button onclick="R_Click(0);"> グー</button>
+    <button onclick="R_Click(1);"> チョキ</button>
+    <button onclick="R_Click(2);"> パー</button>
+    <br />
+    <!-- お互い何を出したか見えるようにする -->
+    <p><img id="jankenpon2" src="../img/jan.png" width="200" height="200"></p>
+    <div id="Rejan1"></div>
+    <div id="Rejan2"></div>
+
+
+<footer>
+    <a href="" class="logo">
+      <span>じゃんけん大会</span>  <!-- MARU -->
+        </a>
+    <div class="copyright">© Game MARU</div>
+  </footer>
+</body>
+</html>
+
+
